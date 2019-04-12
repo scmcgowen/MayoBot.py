@@ -8,6 +8,9 @@ from pprint import pprint
 # Bot ID: 564362414770880512
 support_channel = 565499722635280404
 botspam_channel = 565478348483067914
+
+
+
 class MyClient(discord.Client):
 
 
@@ -37,15 +40,15 @@ class MyClient(discord.Client):
 
         """~~~~~~~~COMMANDS~~~~~~~~"""
 
-        if message.channel.id == botspam_channel:
-            if message.content.startswith('!a'):
-                await message.add_reaction('\U0001f44d')  # thumbsup emoji
-                await message.add_reaction('\U0001f44e')  # thumbsdown emoji
-                await message.add_reaction('\U00002705')  # checkbox emoji
-            #if message.content.startswith('!help'):
-            #    await message.channel.send('Help feature will be added very soon.')
-            if message.content.startswith('!mute'):
-                JsonHelper().mute()
+        # if message.channel.id == botspam_channel:
+        #     if message.content.startswith('!a'):
+        #         await message.add_reaction('\U0001f44d')  # thumbsup emoji
+        #         await message.add_reaction('\U0001f44e')  # thumbsdown emoji
+        #         await message.add_reaction('\U00002705')  # checkbox emoji
+        #     #if message.content.startswith('!help'):
+        #     #    await message.channel.send('Help feature will be added very soon.')
+        #     if message.content.startswith('!mute'):
+        #         JsonHelper().mute()
 
 
     async def on_reaction_add(self, reaction, user):
