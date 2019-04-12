@@ -1,0 +1,41 @@
+{
+  "blacklist": [
+    "?help",
+    "!help",
+    "!stats",
+    "ping",
+    "pong"
+  ],
+  "users": [
+    {
+      "id": 218444620051251200,
+      "points": 24,
+      "muted": false
+    },
+    {
+      "id": 43785345334534545345,
+      "points": 24,
+      "muted": false
+    },
+    {
+      "id": 345345345345345345,
+      "points": 24,
+      "muted": false
+    },
+    {
+      "id": 34534534535345345,
+      "points": 24,
+      "muted": false
+    },
+    {
+      "id": 34534535345345345345,
+      "points": 24,
+      "muted": true
+    },
+    {
+      "id": 34534535345345345,
+      "points": 24,
+      "muted": false
+    }
+  ]
+}
