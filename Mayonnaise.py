@@ -30,7 +30,7 @@ def setup():
 def load_modules():
     module_list = get_module_names()
     for module in module_list:
-        my_module = importlib.import_module(name='.' + module, package='modules')
+        my_module = importlib.import_module("modules.%s" % module)
         klass = getattr(my_module, module)
         bot.add_cog(klass(bot))
 

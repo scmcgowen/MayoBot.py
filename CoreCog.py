@@ -25,7 +25,7 @@ class CoreCog(commands.Cog):
                 if check == "fine":
                     await ctx.send("⬇ |   Module '%s' was downloaded successfully and checked. No errors found! Enabling module..." % name)
                     add_module(name)
-                    my_module = importlib.import_module(name='.' + name, package='modules')
+                    my_module = importlib.import_module(".modules.%s" % name)
                     klass = getattr(my_module, name)
                     self.bot.add_cog(klass(self.bot))
                     await ctx.send("✅ |   Module '%s' was enabled!" % name)
