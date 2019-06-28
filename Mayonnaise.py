@@ -1,12 +1,12 @@
 import importlib
-from pprint import pprint
+
 
 import discord, json
 from discord.ext import commands
 
 from Config import get_token, get_module_names
 from CoreCog import CoreCog
-from ModuleGetter import download_module, check_module
+
 
 bot = commands.Bot(command_prefix='?')
 
