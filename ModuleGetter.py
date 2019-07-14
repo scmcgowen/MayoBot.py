@@ -14,7 +14,7 @@ def check_module(name: str) -> str:
 
     klass = []
     try:
-        my_module = importlib.import_module(name='.' + name, package='modules')
+        my_module = importlib.import_module("modules.%s" % name)
         klass = getattr(my_module, name)
 
         if issubclass(klass, commands.Cog):

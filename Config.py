@@ -5,7 +5,7 @@ def get_modules():
     config = configparser.ConfigParser()
     config.read("modules.ini")
     section = config['modules']
-    return config.items('modules')
+    return dict(config.items('modules'))
 
 
 def get_module_names():
@@ -25,7 +25,12 @@ def add_module(name: str):
 
 
 def remove_module(name: str):
-    pass
+    config = configparser.ConfigParser()
+    config.read("modules.ini")
+    section = config['modules']
+    config.remove_option(section, name)
+    with open('modules.ini', 'w') as configfile:
+        config.write(configfile)
 
 
 def get_token() -> str:

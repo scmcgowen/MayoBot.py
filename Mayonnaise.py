@@ -4,13 +4,11 @@ import importlib
 import discord, json
 from discord.ext import commands
 
-from Config import get_token, get_module_names
+from Config import get_token, get_module_names, get_modules
 from CoreCog import CoreCog
 
 
 bot = commands.Bot(command_prefix='?')
-
-bot.remove_command('help')
 
 
 @bot.event
@@ -33,6 +31,7 @@ def load_modules():
         my_module = importlib.import_module("modules.%s" % module)
         klass = getattr(my_module, module)
         bot.add_cog(klass(bot))
+
 
 
 setup()
