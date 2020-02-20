@@ -8,7 +8,7 @@ from Config import get_token, get_module_names, get_modules
 from CoreCog import CoreCog
 
 
-bot = commands.Bot(command_prefix='?')
+bot = commands.Bot(command_prefix='s!')
 
 
 @bot.event
